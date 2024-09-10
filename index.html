@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option call legend </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <div class="ticker">
+        <div class="ticker-wrap">
+            <div class="ticker-content">
+                <div class="nifty50">Nifty50: Loading...</div>
+                <div class="banknifty">BankNifty: 40,000</div>
+                <div class="sensex">Sensex: 60,000</div>
+                <div class="nifty500">Nifty500: 14,000</div>
+                <!-- Duplicate content for seamless scrolling -->
+                <div class="nifty50">Nifty50: Loading...</div>
+                <div class="banknifty">BankNifty: 40,000</div>
+                <div class="sensex">Sensex: 60,000</div>
+                <div class="nifty500">Nifty500: 14,000</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="nav_logo">
+            <img src="opllogo.png" alt="Logo" class="logo_image">
+            <span class="logo_text">OptionCallLegend</span>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i> <!-- Unicode for three bars (hamburger icon) -->
+        </div>
+        <div class="nav_links" id="navLinks">
+            <div class="nav_opl_name">Home</div>
+            <div class="nav_OurServices">Our Services</div>
+            <div class="nav_Products">Products</div>
+            <div class="nav_todays_pick">Today's Pick</div>
+            <div class="nav_contact_us">Contact Us</div>
+        </div>
+    </div>
+    <main>
+        <div class="hero-section">
+            <div class="slider">
+                <div class="slide active" id="slide1">
+                    <h2>Maximize Your Trading Profits</h2>
+                    <p>Join our Option Advisory Service and stay ahead in the market.</p>
+                    <a href="#advisory" class="cta-button">Learn More</a>
+                </div>
+                <div class="slide" id="slide2">
+                    <h2>Invest with Confidence</h2>
+                    <p>Partner with our Investment Firm for tailored financial strategies.</p>
+                    <a href="#investment" class="cta-button">Our Services</a>
+                </div>
+                <div class="slide" id="slide3">
+                    <h2>Master the Markets</h2>
+                    <p>Enroll in our comprehensive Trading Course and become a pro trader.</p>
+                    <a href="#course" class="cta-button">Start Learning</a>
+                </div>
+                <div class="slide" id="slide4">
+                    <h2>Ready to Start?</h2>
+                    <p>Click here to begin your trading journey with our recommended tools.</p>
+                    <a href="affiliate-link" class="cta-button">Start Now</a>
+                </div>
+            </div>
+            <div class="controls">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="index_nav.js"></script>
+</body>
+</html>

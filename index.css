@@ -1,0 +1,237 @@
+*{
+    margin: 0px;
+    background-color: white;
+    font-family: sans-serif;
+   
+}
+
+
+.ticker {
+    background-color: white; /* Background color for the ticker */
+    color: black; /* Text color */
+    
+    padding: 10px 0; /* Padding for better readability */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Positioning for the content */
+    width: 100%; /* Full width */
+    border: 0.25px solid rgba(0, 0, 0, 0.077); /* Optional border for better separation */
+  }
+  
+  .ticker-wrap {
+    display: inline-block; /* Allow content to move */
+    white-space: nowrap; /* Prevent line breaks */
+    padding-left: 100%; /* Start off-screen */
+    animation: ticker 20s linear infinite; /* Animation settings */
+  }
+
+  .ticker-content::after {
+    content: attr(data-text); /* Duplicate the content */
+    display: inline-block; /* Ensure it stays inline */
+    margin-left: 50px; /* Space between the original and duplicate */
+  }
+
+  .ticker-content {
+    display: inline-block;
+    background-color: white; /* Ensure it stays inline */
+    transform: translateX(-50%); /* Start from the middle of the page */
+  }
+  
+  .ticker-content > div {
+    display: inline-block; /* Inline-block to align items horizontally */
+    margin-right: 50px; /* Space between the items */
+    font-size: medium; /* Adjust font size */
+     /* Bold text */
+  }
+  
+  @keyframes ticker {
+    0% {
+      transform: translateX(0); /* Start from right */
+    }
+    100% {
+      transform: translateX(-50%); /* Move to left */
+    }
+  }
+
+
+
+  
+ /* Styling for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  position: relative;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border: 0.25px solid rgba(0, 0, 0, 0.077);
+}
+
+
+/* Logo styling */
+.nav_logo {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.logo_image {
+  height: 40px; /* Adjust height as needed */
+  margin-right: 10px; /* Space between logo and text */
+  border-radius: 90%;
+}
+
+.logo_text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.nav_links {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.navbar div {
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight:500;
+  cursor: pointer;
+}
+
+.navbar div:hover {
+  color: green;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .nav_links {
+    display: none; /* Hide links initially */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%;
+    background-color: #003366;
+    position: absolute;
+    top: 60px; /* Position below navbar */
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav_links div {
+    margin: 10px 0; /* Add margin between items */
+    padding: 10px 20px;
+  }
+}
+
+
+
+/* hero
+.heroImage{
+    height: 500px;
+    width: 100%;
+    background-image: url(istockphoto-1363104923-612x612.jpg);    
+    background-size:contain;
+}
+ */
+
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background: #333;
+  color: black;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    background-size: cover;
+    background-position:top;
+    background-repeat: no-repeat;
+    color: black;
+    text-align: center;
+}
+
+#slide1 {
+  background-image: url('Designer\ \(3\).jpeg');
+}
+
+#slide2 {
+  background-image: url('2nd.jpeg');
+}
+
+#slide3 {
+  background-image: url('Bse.jpeg');
+}
+
+#slide4 {
+  background-image: url('promise.jpeg');
+}
+
+
+.slide h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.slide p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background: #ff6600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #ff6600;
+}
